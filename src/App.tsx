@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Bell, ChefHat, ChevronDown, CircleDollarSign, ClipboardList, Clock3, Coffee, LayoutDashboard, Plus, Search, Settings, Utensils, Users, X, Minus, Check, Flame, Printer } from 'lucide-react'
 import './App.css'
+import './theme.css'
 import { TeamAccess, type StaffRole } from './TeamAccess'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -69,4 +70,8 @@ function App() {
     {teamOpen&&<TeamAccess role={role} onChange={next=>{setRole(next);localStorage.setItem('polleria-role',next);setView(next==='cajero'?'caja':'mesas')}} onClose={()=>setTeamOpen(false)}/>}
   </div>
 }
+// Opción recomendada para GitHub Pages (evita 404 al recargar rutas):
+import { HashRouter } from 'react-router-dom';
+
+// Envuelve tu aplicación con <HashRouter> en lugar de <BrowserRouter>
 export default App
