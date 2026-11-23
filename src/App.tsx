@@ -71,7 +71,6 @@ function App() {
   </div>
 }
 // Opción recomendada para GitHub Pages (evita 404 al recargar rutas):
-import { HashRouter } from 'react-router-dom';
 
 // Envuelve tu aplicación con <HashRouter> en lugar de <BrowserRouter>
 export default App
